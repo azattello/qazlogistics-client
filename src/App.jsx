@@ -38,26 +38,20 @@ function App() {
         <Route path="/registration" element={isAuth ? <Navigate to="/main" /> : <Registration />} />
 
 
-        {/* {isAuth ? (
+        {isAuth ? (
           <>
            <Route path="/main" element={<Main />} />
             <Route path="/parcels" element={<Parcels />} />
             <Route path="/notification" element={<Notification />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/dashboard" element={<Dashboard />} />
-
-          </>
-        ) : ""} */}
-      
-          {/* <Route path="*" element={<Navigate to="/login" />} /> */}
-      
-          <Route path="/main" element={<Main />} />
-            <Route path="/parcels" element={<Parcels />} />
-            <Route path="/notification" element={<Notification />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/lost" element={<LostClient />} />
             <Route path="/referral" element={<Referral />} />
+          </>
+        ) : ""}
+      
+          {/* <Route path="*" element={<Navigate to="/login" />} /> */}
+            
   
           <Route  path="*" element={<NotFound />} />
 
